@@ -4,9 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --mode=development --watch"
-  },
+     "dev": "react-scripts start",
+     "start": "serve -s build",
+     "build": "react-scripts build",
+     "test": "react-scripts test --env=jsdom",
+     "eject": "react-scripts eject",
+     "heroku-postbuild": "npm run build",
+     "heroku-prebuild": "npm install"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -41,6 +46,7 @@
     "react-router-dom": "^5.2.0",
     "react-select": "^5.2.2",
     "regenerator-runtime": "^0.13.9",
+    "serve": "^13.0.2",
     "smoothscroll-polyfill": "^0.4.4",
     "stripe": "^8.195.0",
     "webpack": "^5.65.0",
