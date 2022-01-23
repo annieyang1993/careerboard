@@ -20,16 +20,16 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route exact path="/">
+          <Route exact path="#/">
               <JobsContainer/>
             </Route>
-          <Route path="/newsletter">
+          <Route path="#/newsletter">
               <NewsletterContainer/>
           </Route>
-          <Route path="/postjob">
+          <Route path="#/postjob">
               <PostJobContainer/>
           </Route>
-          <Route path="/jobdetails" component={JobDetailsContainer} render={props => 
+          <Route path="#/jobdetails" component={JobDetailsContainer} render={props => 
             <JobDetailsContainer {...props}/>
             }>
               
