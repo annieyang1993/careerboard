@@ -12,22 +12,25 @@ Features
 2. Users are able to filter postings based on experience required, location, skills, and more.
 3. Users are able to subscribe to a weekly newsletter via email.
 4. Users are able to post their own listings for a set fee per posting. 
+<img width="1248" alt="Screen Shot 2022-01-26 at 9 10 34 AM" src="https://user-images.githubusercontent.com/82074442/151178606-089dca57-d3ca-4428-a805-cb66a21004a5.png">
+
+1. Search for key words and filter jobs by popular selections:
+-----------------------------------
+<img width="1232" alt="Screen Shot 2022-01-26 at 9 11 26 AM" src="https://user-images.githubusercontent.com/82074442/151178605-cdb5fc03-030a-4acb-b665-416f5218f026.png">
+
+2. Subscribe to the weekly newsletter (writes to the subscription doc in Firebase)
+<img width="1241" alt="Screen Shot 2022-01-26 at 9 11 43 AM" src="https://user-images.githubusercontent.com/82074442/151178600-48426424-beb6-49be-872a-ee6b81db8d27.png">
+
+3. Post your own job openings (uses Firebase Storage for logo uploads and Stripe API to process payment)
+------------------------------------
+<img width="1236" alt="Screen Shot 2022-01-26 at 9 12 00 AM" src="https://user-images.githubusercontent.com/82074442/151178596-f91ac61c-83dc-4fde-beb4-fb37836c6d67.png">
 
 
-
-Technologies
+Technologies Used
 -----------------------
-The technologies used were:
-1. React and Redux on the frontend
-2. Ruby on Rails backend, with BCrypt authentication.
-3. Heroku to deploy the website.
-4. Google Maps API to allow users to locate cafes via map. 
-5. Separate reducers and actions were setup for each state of the application.  
+To ensure scalability and performance, I used React on the frontend and Firebase (Cloud Firestore, Storage and Hosting) for the backend, as well as Stripe API to process payments. I used React Hooks to easily reflect changes in the website state. 
 
-Additional Resources
+Future Features
 --------------------------
-1. Backend Routes: https://github.com/annieyang1993/DoorDashClone/wiki/Backend-Routes
-2. Database Schema: https://github.com/annieyang1993/DoorDashClone/wiki/Database-Schema
-3. Frontend Routes and Components: https://github.com/annieyang1993/DoorDashClone/wiki/Frontend-Routes-and-Components
-4. MVP List: https://github.com/annieyang1993/DoorDashClone/wiki/MVP-List
-5. Sample State: https://github.com/annieyang1993/DoorDashClone/wiki/Sample-State
+1. In the future, I'd like to allow user authentication on the job seeker side to facilitate tracking applications and saving job openings in their user profile
+2. Track "Apply Now" clicks and Job View metrics for employers.
