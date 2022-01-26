@@ -2,7 +2,7 @@ CryptoCareerBoard
 ----------------------
 
 CryptoCareerBoard is an online job board where users can search for and filter Web 3 jobs based on experience level, location, skills, and other relevant factors. 
-Users can choose to apply to jobs via the "Apply" button, subscribe to the weekly newsletter, or post their own job openings (for a set fee). 
+Users can choose to apply to jobs via the "Apply" button, subscribe to the weekly newsletter, or post their own job openings. 
 
 Link to live website: https://cryptocareerboard.com/#/
 
@@ -28,7 +28,7 @@ Features
 
 Technologies Used
 -----------------------
-To ensure scalability and performance, I used React on the frontend and Firebase (Cloud Firestore, Storage and Hosting) for the backend, as well as Stripe API to process payments. I used React Hooks to easily reflect changes in the website state. 
+I used React on the frontend and Firebase (Cloud Firestore, Storage and Hosting) for the backend to ensure scalability and performance, as well as Stripe API to process payments. I used React Hooks to reflect changes in the website state. 
 
 Future Features
 --------------------------
