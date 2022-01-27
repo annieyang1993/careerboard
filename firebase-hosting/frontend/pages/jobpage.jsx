@@ -478,7 +478,83 @@ export default function JobPage() {
 
                     </div>   
                     </div>
-                <div className = 'job-details-page'>    
+
+
+                <div className = 'job-details-page'> 
+
+
+                 {loading ? <div className = 'loader'></div> : 
+
+                <div className = 'job-page-right' id='job-page-right'>
+
+                                    
+                    <div className = 'job-header-info'>
+                        <div className = 'job-page-logo-container'>
+                            <img className = 'job-page-logo' src={companyLogo}/>
+                        </div>
+                        <div className = 'job-page-header-details'>
+                            <div className = 'job-page-title' id = 'job-page-title'>{jobTitle}</div> <br/>
+                            <div className = 'job-page-name'>{companyName}</div> <br/>
+                        </div>
+                        <a href={applyBy === 'website' ? `${applicationWebsite}` : `mailto:${applicationEmail}`} target="_blank">
+                            <div className = 'apply-button'>
+                                Apply Now
+                            </div>
+                        </a>
+                    <div className = 'details-half-container'>
+                    <div className = 'details-half'>
+                        <div className='job-page-deets'><div className='job-page-inner-1'>📍 </div><div className='job-page-inner'>{jobLocation}</div></div>
+                        <div className='job-page-deets'><div className='job-page-inner-1'>⏱  </div><div className='job-page-inner'>{contractType}</div></div>
+                    </div>
+
+                    <div className = 'details-half'>
+                        {role === '' ? null : 
+                        <div className='job-page-deets'><div className='job-page-inner-1'>💼  </div><div className='job-page-inner'>{role}</div></div> }
+                        {tags === '' ? null : 
+                        <div className='job-page-deets'><div className='job-page-inner-1'>🏷  </div><div className='job-page-inner'>{tags}</div></div> }
+                    </div>
+                    </div>
+                        
+                    </div>
+
+                    <div className = 'job-page-line'></div>
+                    
+                   
+                    <ReactMarkdown className = 'job-page-details' children={jobDescription}/>
+                    <br/>
+
+                    {Number(minYearlySalary) <= 0 && Number(maxYearlySalary) <= 0 ? null : Number(minYearlySalary) <= 0 ? 
+                    <div className = 'job-page-compensation'>
+                        Compensation Estimate:
+                        <div className = 'estimate'>{currencyFormat(maxYearlySalary)}</div>
+                    </div> : maxYearlySalary === 0 ? 
+                    <div className = 'job-page-compensation'>
+                        Compensation Estimate:
+                        <div className = 'estimate'>{currencyFormat(minYearlySalary)}</div>
+                    </div> : 
+                    <div className = 'job-page-compensation'>
+                        Compensation Estimate:
+                        <div className = 'estimate'> {currencyFormat(minYearlySalary)} - {currencyFormat(maxYearlySalary)}</div>
+                    </div>}
+
+                    {companySize !== null ? <div className = 'job-page-compensation'>
+                        Company Size:
+                        <div className = 'estimate'>{companySizes[Number(companySize)]}</div>
+                    </div> : null}
+
+                    <div className = 'job-page-compensation'>
+                        Posted On:
+                        <div className = 'estimate'>{new Date(createdOn*1000).toLocaleDateString()}</div>
+                    </div>
+
+                     <a  href={applyBy === 'website' ? `${applicationWebsite}` : `mailto:${applicationEmail}`} target="_blank">
+                        <div className = 'apply-button-bottom'>
+                            Apply Now
+                        </div>
+                    </a>
+                    </div> }
+
+                </div>   
 
                 {authContext.filteringBool ? <div className = 'job-page-left'>
 
@@ -571,89 +647,7 @@ export default function JobPage() {
                     
                 </div> }
 
-                {loading ? <div className = 'loader'></div> : 
-
-                <div className = 'job-page-right' id='job-page-right'>
-
-                                    
-                    <div className = 'job-header-info'>
-                        <div className = 'job-page-logo-container'>
-                            <img className = 'job-page-logo' src={companyLogo}/>
-                        </div>
-                        <div className = 'job-page-header-details'>
-                            <div className = 'job-page-title' id = 'job-page-title'>{jobTitle}</div> <br/>
-                            <div className = 'job-page-name'>{companyName}</div> <br/>
-                        </div>
-                        <a href={applyBy === 'website' ? `${applicationWebsite}` : `mailto:${applicationEmail}`} target="_blank">
-                            <div className = 'apply-button'>
-                                Apply Now
-                            </div>
-                        </a>
-                    <div className = 'details-half-container'>
-                    <div className = 'details-half'>
-                        <div className='job-page-deets'><div className='job-page-inner-1'>📍 </div><div className='job-page-inner'>{jobLocation}</div></div>
-                        <div className='job-page-deets'><div className='job-page-inner-1'>⏱  </div><div className='job-page-inner'>{contractType}</div></div>
-                    </div>
-
-                    <div className = 'details-half'>
-                        {role === '' ? null : 
-                        <div className='job-page-deets'><div className='job-page-inner-1'>💼  </div><div className='job-page-inner'>{role}</div></div> }
-                        {tags === '' ? null : 
-                        <div className='job-page-deets'><div className='job-page-inner-1'>🏷  </div><div className='job-page-inner'>{tags}</div></div> }
-                    </div>
-                    </div>
-                        
-                    </div>
-
-                    <div className = 'job-page-line'></div>
-                    
-                   
-                    <ReactMarkdown className = 'job-page-details' children={jobDescription}/>
-                    <br/>
-
-                    {Number(minYearlySalary) <= 0 && Number(maxYearlySalary) <= 0 ? null : Number(minYearlySalary) <= 0 ? 
-                    <div className = 'job-page-compensation'>
-                        Compensation Estimate:
-                        <div className = 'estimate'>{currencyFormat(maxYearlySalary)}</div>
-                    </div> : maxYearlySalary === 0 ? 
-                    <div className = 'job-page-compensation'>
-                        Compensation Estimate:
-                        <div className = 'estimate'>{currencyFormat(minYearlySalary)}</div>
-                    </div> : 
-                    <div className = 'job-page-compensation'>
-                        Compensation Estimate:
-                        <div className = 'estimate'> {currencyFormat(minYearlySalary)} - {currencyFormat(maxYearlySalary)}</div>
-                    </div>}
-
-                    {companySize !== null ? <div className = 'job-page-compensation'>
-                        Company Size:
-                        <div className = 'estimate'>{companySizes[Number(companySize)]}</div>
-                    </div> : null}
-
-                    <div className = 'job-page-compensation'>
-                        Posted On:
-                        <div className = 'estimate'>{new Date(createdOn*1000).toLocaleDateString()}</div>
-                    </div>
-
-                     <a  href={applyBy === 'website' ? `${applicationWebsite}` : `mailto:${applicationEmail}`} target="_blank">
-                        <div className = 'apply-button-bottom'>
-                            Apply Now
-                        </div>
-                    </a>
-                    </div> }
-
-                    
-
-
-                    
-
                
-                
-
-                
-
-                <div className = 'bottom-spacer'></div>
-                </div>
             
             </div>
     );

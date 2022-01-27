@@ -30,12 +30,12 @@ function FeaturesCard() {
             <div className='features'>
                 <div className= 'feature'>
                     <div role="img" aria-label="sheep" className='img' width="100">🗓 </div>
-                    <div>Live for 60 days on our job listings page</div>
+                    <div>Live for 60 days</div>
 
                 </div>
                 <div className= 'feature'>
                     <div role="img" aria-label="sheep" className='img' width="100">🗞  </div>
-                    <div>Automatically included in our weekly newsletter</div>
+                    <div>Automatically included in our weekly newsletter sent to 1000+ and rapidly growing candidates</div>
 
                 </div>
                 <div className= 'feature'>
@@ -46,7 +46,6 @@ function FeaturesCard() {
                     <div role="img" aria-label="sheep" className='img' width="100">⚙️</div>
                     <div>Technical support after going live</div>
                 </div> <br/>
-                <div className='bottom'></div>
             </div>
 
             
@@ -56,9 +55,6 @@ function FeaturesCard() {
 function ExplanationCard() {
     return(
         <div className='explanation-card'>
-            <div className='explanation-title'>
-                CryptoCareerBoard is the premier Web 3.0 job board
-            </div>
 
             <div className='points'>
             <div className = 'explanation-point'>
@@ -602,7 +598,7 @@ function JobPost() {
             setLogoBool(true);
         }
 
-        if (experience === null || experience===''){
+        if (experience === null){
             setExperienceBool(false);
             setContinue1(false);
             continueTemp = false;
@@ -683,6 +679,9 @@ function JobPost() {
             </div> */}
             {/* <div className= 'explanation-background'></div> */}
             <FeaturesCard/>
+                        <div className='explanation-title'>
+                CryptoCareerBoard is the premier Web 3.0 job board
+            </div>
             <ExplanationCard/>
             <div className = "progress-bar">
                 <div className = "progress-one">
@@ -691,18 +690,15 @@ function JobPost() {
                     </div>
                     <div className="dot-text">1. Posting </div>
                 </div>
-                <div className = 'line'>
 
-                </div>
+               
                 <div className = "progress-two">
                     <div className = "dot">
                         {screen === 1 ? <div className = "dot-filler"></div> : null}
                     </div>
                     <div className="dot-text">2. Review </div>
                 </div>
-                <div className = 'line'>
-                    
-                </div>
+                
                 <div className = "progress-three">
                     <div className = "dot">
                         {screen === 2 ? <div className = "dot-filler"></div> : null}
@@ -1091,13 +1087,13 @@ function JobPost() {
                 <div className = 'label-and-entry' >
                 <label className = "title" for="company-description">Experience Required:</label>
                 <div className = 'entry-container' style = {{border: '1px solid red'}}>
-                <input className = "entry" placeholder = 'Enter the number of years of experience required for this role.' type="number" id="company-description" name="company-description" value={experience} onChange={(event)=>{if (experience === '') {setExperience(null)} else{setExperience(event.target.value)}}}/>
+                <input className = "entry" placeholder = 'Enter the number of years of experience required for this role.' type="number" id="company-description" name="company-description" value={experience} onChange={(event)=>{if (event.target.value === '') {setExperience(null)} else{setExperience(event.target.value)}}}/>
                 </div>
                 </div> : 
                 <div className = 'label-and-entry'>
                 <label className = "title" for="company-description">Experience Required:</label>
                 <div className = 'entry-container'>
-                <input className = "entry" placeholder = 'Enter the number of years of experience required for this role.' type="number" id="company-description" name="company-description" value={experience} onChange={(event)=>{if (experience === '') {setExperience(null)} else{setExperience(event.target.value)}}}/>
+                <input className = "entry" placeholder = 'Enter the number of years of experience required for this role.' type="number" id="company-description" name="company-description" value={experience} onChange={(event)=>{if (event.target.value === '') {setExperience(null)} else{setExperience(event.target.value)}}}/>
                 </div>
                 </div>}
 

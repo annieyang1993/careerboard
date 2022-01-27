@@ -1,45 +1,177 @@
 /* AutoComplete */
+.wrap{
+  align-items: center;
+  text-align: center;
+  align-self: center;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+}
+
 
 .tabs{
-  width: 28%;
   padding: 10px;
+  padding-bottom: 5px;
+  margin-top: -10px;
+  
   float: right;
   color: white;
   right: 0px;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .header{
   top: 0px;
-  width: 1100px;
-  max-width: 1100px;
-  padding-top: 10px;
+  width: 100%;
+  max-width: 85rem;
+  padding-top: 20px;
   font-size: 15px;
   font-weight: bold;
+  padding-bottom: 10px;
   margin: auto;
-  height: 70px;
+  
+
   background-color:transparent;
   font-family: 'Orbitron', sans-serif;
-  z-index: 10
+  z-index: 10;
+  
+}
+
+.logo-wrap{
+  display:contents;
+  padding: 0px;
 }
 
 .header-wrapper{
-  width: 100vw;
+  width: 100%;
   top: 0px;
-  height: 70px;
+
   background: rgba(28,28,28);
   position: fixed;
   z-index: 1;
   -webkit-box-shadow:0px 5px 5px black;
   -moz-box-shadow:0px 5px 5px black;
   box-shadow:0px 5px 5px black;
+}
 
+.home{
+  float: left;
+  color: white;
+  left: 0px;
+  width: 65%;
+  max-width: 55rem;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.newsletter-input-inner{
+  width: calc(98% - 8rem);
+  margin-left: 0px;
+  background-color: transparent;
+  border: none;
+  font-size: 0.8rem;
+  color: white;
+  outline: none;
+  margin-top: 6px;
+  margin-left: 5px;
+  float: left;
+}
+
+.search-input{
+  width: 45%;
+  height: 30px;
+  color: black;
+  margin-top: 3px;
+  margin: auto;
+  margin-top: 2px;
+  margin-left: 15px;
+  border-radius: 3px;
+  border: 1px solid rgba(128, 128, 128, 0.776);
+  background: black;
+}
+
+
+.newsletter-header-input{
+  width: 45%;
+  height: 30px;
+  color: black;
+  margin: auto;
+  margin-top: 2px;
+  background: white;
+  border-radius: 3px;
+  padding-right: 2px;
+  margin-left: 15px;
+  border: 1px solid rgba(128, 128, 128, 0.776);
+  background: black;
+  color: white;
+}
+
+.tab-content{
+  align-self: 'center';
+  float: right;
+  text-align: 'center';
+  font-size: 14px;
+
+}
+
+.tab{
+  text-align: 'center';
+  align-content: 'center';
+  cursor: grab;
+  margin-top: 10px;
+  margin: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+
+
+
+.post-job{
+  float: right;
+  text-align: 'center';
+  align-content: 'center';
+  cursor: grab;
+  margin: 10px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 3px;
+  border: 1px solid gray;
+  color: rgb(56, 112, 154);
+
+
+}
+
+
+
+
+.subscribe-newsletter{
+  border: 1px solid gray;
+  text-align: center;
+  width: 5rem;
+  float: right;
+  margin-top: 4px;
+  padding: 1px;
+  font-size: 0.8rem;
+  background-color: rgb(56, 112, 154);
+  border-radius: 3px;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  font-weight: bold;
 }
 
 .top-filter-wrapper{
   width: 100vw;
   background: rgba(28,28,28);
-  height: 85px;
   position: fixed;
   margin-top: 40px;
   left: 0px;
@@ -56,15 +188,17 @@
 }
 
 .top-filter{
-  width: 1100px;
+  width: 100%;
+  max-width: 85rem;
   margin: auto;
   display: block;
   display: flex;
   flex-wrap: wrap;
-  padding-left: 30px;
+  padding-left: 1%;
+  padding-right: 1%;
   margin-bottom: 10px;
   margin-top: 2px;
-  font-size: 12px;
+  font-size: 0.8rem;
   background: transparent;
   font-family: 'Roboto', sans-serif;
 
@@ -77,7 +211,6 @@
 
 .job-details-page{
   color: white;
-  margin-left: 100px;
   margin-top: -150px;
 }
 
@@ -93,29 +226,16 @@
   margin: 0 auto;
 }
 
-.wrap{
-  align-items: center;
-  text-align: center;
-  align-self: center;
-}
+
 
 .img{
   font-size: 50px;
   margin-bottom: 20px;
 }
 
-.progress-bar{
-  height: 100px;
-  align-items: center;
-  margin-top: 300px;
-  margin: auto;
-  width: 550px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-}
 
 .app{
-  width: 100vw;;
+  width: 100%;
   margin: auto;
 }
 
@@ -123,6 +243,7 @@
   float: left;
   color: white;
   align-items: center;
+  text-align: center;
 }
 
 
@@ -130,12 +251,14 @@
   float: left;
   color: white;
   align-items: center;
+  text-align: center;
 }
 
 .progress-three{
   float: left;
   color: white;
   align-items: center;
+  text-align: center;
 }
 
 .dot{
@@ -167,9 +290,8 @@
 }
 
 .logo-header{
-  height: 30px;
+  width: 2rem;
   float: left;
-  margin-top: 10px;
   margin-left: 20px;
 }
 
@@ -194,7 +316,8 @@ background-color: green;
 .dot-text{
   float: left;
   margin-top: 18px;
-  margin-right: 20px;
+  margin-right: 5px;
+  text-align: center;
 }
 
 .line{
@@ -202,19 +325,22 @@ background-color: green;
   height: 1px;
   background-color: white;
   float: left;
+  
   margin-top: 25px;
+
 }
 
 .content{
   font-family: 'Orbitron', sans-serif;
-  font-size: 14px;
-  margin-bottom: 50px;
   align-items: center;
   align-self: center;
-  width: 1100px;
-  max-width: 1100px;
-  text-align: left;
+  width: 100%;
+  max-width: 85rem;
   margin: auto;
+  margin-bottom: 50px;
+  text-align: left;
+  align-items: center;
+  align-content: center;
 
 }
 
@@ -249,9 +375,9 @@ background-color: green;
 
 .contact{
   float: right;
-  margin-right: 20px;
   color: gray;
   text-decoration: none;
+  margin-right: 10px;
 }
 
 
@@ -259,6 +385,8 @@ background-color: green;
   float: left;
   color: rgb(217, 215, 161);
   text-transform: capitalize;
+  width: calc(100% - 135px);
+  text-decoration: none;
 }
 
 .location{
@@ -317,6 +445,10 @@ background-color: green;
   margin-bottom: 20px;
   border-radius: 5px;
   border: 1px solid rgba(128, 128, 128, 0.658);
+
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
 
 
 }
@@ -436,6 +568,7 @@ background-color: green;
   display: inline;
   float: left;
   width: 70%;
+  padding: 0px;
 }
 
 .job:hover{
@@ -513,12 +646,15 @@ background-color: green;
 
 .title{
   color: white;
-  width: 20%;
+  width: calc(20% - 5px);
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+  display: flex;
+  flex-wrap: wrap;
   float: left;
   margin-top: 0px;
-  height: 30px;
+  padding-right: 5px;
+
 }
 
 .title-location{
@@ -527,7 +663,8 @@ background-color: green;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   float: left;
-  height: 39px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .title-role{
@@ -574,7 +711,7 @@ background-color: green;
 }
 
 .features-card{
-    width: 100%;
+    width: calc(100%-40px);
     padding: 20px;
     border-radius: 5px;
     background-color: transparent;
@@ -582,11 +719,13 @@ background-color: green;
     text-align: center;
     align-items: center;
     text-align: center;
-    margin: auto;
-    margin-top: 100px;
+    
     z-index: 5;
     height: auto;
     font-family: 'Orbitron', sans-serif;
+    margin: auto;
+    margin-top: 100px;
+    
 
 
 }
@@ -629,29 +768,55 @@ background-color: green;
 
 
 .explanation-card{
-  width: 90%;
-  padding-bottom: 100px;
+  width: calc(95% - 40px);
+  padding: 20px;
+  padding-bottom: 50px;
   padding-top: 50px;
   background: rgb(35,35,35);
   align-items: center;
   text-align: center;
   margin: auto;
   margin-bottom: 50px;
+  margin-top: 40px;
   flex: auto;
   border-radius: 5px;
   border: 1px solid rgba(128, 128, 128, 0.658);
   font-family: 'Orbitron', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
 
 }
 
+.progress-bar{
+  height: 100px;
+  align-items: center;
+  margin-top: 300px;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  align-content: center;
+  display: block;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 50%;
+  width: calc(100%-40px);
+  max-width: 500px;
+  padding-right: 0px;
+  transform: translate(-50%);
+  margin-bottom: 20px;
+}
+
+
+
 .explanation-background{
-    width: 100vw;
-    top: 350px;
-    background-color:rgb(42, 39, 88);
-    align-items: center;
-    text-align: center;
-    height: 570px;
-    margin: auto;
+  width: 100vw;
+  top: 350px;
+  background-color:rgb(42, 39, 88);
+  align-items: center;
+  text-align: center;
+  height: 570px;
+  margin: auto;
 
 }
 
@@ -665,10 +830,10 @@ background-color: green;
 }
 
 .explanation-paragraph{
-  width: 95%;
+  width: calc(95% - 2rem);
   margin-bottom: 20px;
   text-align: left;
-  margin-left: 30px;
+  margin-left: 2rem;
   margin-top: 5px;
   font-family: 'Roboto', sans-serif;
   color: gray;
@@ -676,6 +841,7 @@ background-color: green;
   word-spacing: 4px;
   font-size: 14px;
   line-height: 20px;
+  margin-top: 1rem;
 
 
   
@@ -695,14 +861,15 @@ background-color: green;
   font-family: FreeMono, monospace;
   font-stretch: semi-expanded;
   margin: auto;
-  width: 90%;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .feature{
-  max-width: 170px;
-  width: 95%;
-  height: 150px;
-  margin: 20px;
+  width: 18.5%;
+  margin-left: 2%;
+  margin-right: 2%;
   font-weight: bold;
   color: white;
   font-family: 'Orbitron', sans-serif;
@@ -716,6 +883,8 @@ background-color: green;
   float: left;
   letter-spacing: 2px;
   word-spacing: 4px;
+  height: 180px;
+  
 }
 
 
@@ -731,13 +900,13 @@ background-color: green;
 
 .check{
   float: left;
+  width: 2rem;
 }
 
 .explanation-text{
   text-align: left;
-  width: 95%;
+  width: calc(95% - 2rem);
   font-weight: bold;
-  margin-left: 16px;
   color: white;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
@@ -749,16 +918,20 @@ background-color: green;
 }
 
 .explanation-title{
-  font-weight: bold;
-  font-size: 20px;
+    font-weight: bold;
+  font-size: 40px;
   color: white;
+  margin-bottom: 0px;
+  text-shadow: 5px 10px 100px 10px rgb(41, 41, 41);
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 2px;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 4px;
   word-spacing: 4px;
-  font-stretch: narrower;
-  margin-bottom: 70px;
-  height: 60px;
-  margin: auto;
+  text-align: center;
+
 
 }
 
@@ -775,6 +948,7 @@ background-color: green;
   color: white;
   letter-spacing: 4px;
   word-spacing: 4px;
+  width: 100%;
 
 }
 
@@ -843,8 +1017,9 @@ background-color: green;
 }
 .label-and-entry{
   width: 100%;
-  height: 50px;
   margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .label-and-entry-role{
@@ -857,6 +1032,9 @@ background-color: green;
   width: 100%;
   height: 310px;
   margin-top: 10px;
+    display: flex;
+  flex-wrap: wrap;
+
 }
 
 .label-and-entry-company-description{
@@ -960,7 +1138,7 @@ background-color: green;
 }
 
 .radio-buttons{
-  width: 78%;
+  width: 70%;
   float: right;
   padding: 5px;
   border-radius: 5px;
@@ -1037,17 +1215,16 @@ background-color: green;
   width: 100%;
   background: transparent;
   border-top: 1px solid gray;
-  height: 50px;
   padding-top: 15px;
   font-family: 'Orbitron', sans-serif;
   font-weight: bold;
   color: gray;
-  font-size: 12px;
+  font-size: 0.6rem;
 }
 
 .copyright{
   float: left;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .success{
@@ -1108,38 +1285,8 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.search-input{
-  width: 45%;
-  height: 28px;
-  color: black;
-  margin-top: 3px;
-  margin: auto;
-  margin-top: 2px;
-  float: left;
-  margin-left: 15px;
-  border-radius: 3px;
-  border: 1px solid rgba(128, 128, 128, 0.776);
-  background: black;
 
-}
 
-.newsletter-header-input{
-  width: 45%;
-  height: 28px;
-  color: black;
-  margin: auto;
-  margin-top: 2px;
-  background: white;
-  border-radius: 3px;
-  padding-right: 2px;
-  margin-bottom: 80px;
-  float: left;
-  margin-left: 15px;
-  border: 1px solid rgba(128, 128, 128, 0.776);
-  background: black;
-  color: white;
-
-}
 
 .newsletter-header-input-page{
   width: 50%;
@@ -1150,33 +1297,21 @@ input[type=number] {
   background: white;
   border-radius: 3px;
   padding-right: 2px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   float: left;
   margin-left: 15px;
   border: 1px solid rgba(128, 128, 128, 0.776);
   background: black;
   color: white;
-  margin-top: 50px;
-  margin-left: 50%;
-  transform: translate(-50%);
-
-}
-
-.newsletter-input-inner{
-  width: 70%;
   margin: auto;
-  background-color: transparent;
-  border: none;
-  font-size: 12px;
-  color: white;
-  outline: none;
-  float: left;
-  margin-top: 6px;
-  margin-left: 10px;
+  margin-top: 10px;
+
 }
+
+
 
 .newsletter-input-inner-page{
-  width: 70%;
+  width: calc(95% - 6rem);
   margin: auto;
   background-color: transparent;
   border: none;
@@ -1185,7 +1320,7 @@ input[type=number] {
   outline: none;
   float: left;
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 .no-jobs{
@@ -1196,31 +1331,16 @@ input[type=number] {
   margin-top: 200px;
 }
 
-.subscribe-newsletter{
-  height: 17px;
-  border: 1px solid gray;
-  text-align: center;
-  width: 25%;
-  float: right;
-  margin-top: 3px;
-  padding-top: 2px;
-  font-size: 12px;
-  background-color: rgb(56, 112, 154);
-  border-radius: 3px;
-  font-family: 'Orbitron', sans-serif;
-  color: white;
-  font-weight: bold;
-}
 
 .subscribe-newsletter-page{
   height: 26px;
   border: 1px solid gray;
   text-align: center;
-  width: 25%;
+  width: 6rem;
   float: right;
   margin-top: 2px;
   padding-top: 8px;
-  font-size: 14px;
+  font-size: 0.9rem;
   background-color: rgb(56, 112, 154);
   border-radius: 6px;
   font-family: 'Orbitron', sans-serif;
@@ -1283,11 +1403,11 @@ input[type=number] {
   width: 75%;
   background-color: transparent;
   border: none;
-  font-size: 12px;
   color: white;
   outline: none;
   float: left;
-  margin-top: 7px;
+  height: 28px;
+  font-size: 0.8rem;
 }
 
 
@@ -1295,6 +1415,7 @@ input[type=number] {
   font-size: 16px;
   margin-top: 5px;
   margin-left: 5px;
+  margin-right: 0px;
   color: white;
   float: left;
   
@@ -1359,13 +1480,7 @@ input[type=number] {
 }
 
 
-.home{
-  float: left;
-  color: white;
-  height: 50px;
-  left: 0px;
-  width: 65%;
-}
+
 
 .tab-content{
     text-decoration: none;
@@ -1398,58 +1513,62 @@ input[type=number] {
 }
 
 .news-name{
-  width: 100%;
+  width: 90%;
   text-align: center;
   font-family: 'Orbitron', sans-serif;
-  margin-top: 30px;
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: bold;
   color: white;
   letter-spacing: 4px;
   word-spacing: 4px;
+  margin: auto;
+  margin-top: 30px;
 }
 .news-line1{
-  width: 100%;
+  width: 90%;
   text-align: center;
   font-family: 'Orbitron', sans-serif;
-  margin-top: 30px;
-  font-size: 20px;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 1.6rem;
   font-weight: bold;
   color: white;
   letter-spacing: 4px;
   word-spacing: 4px;
-
+  color: rgb(202, 132, 110)
 }
 
 
 .news-line2{
-  width: 100%;
+  width: 90%;
   text-align: center;
   font-family: 'Orbitron', sans-serif;
+  margin: auto;
   margin-top: 10px;
-  font-size: 16px;
+  font-size: 1.3rem;
   font-weight: bold;
   color: white;
   letter-spacing: 2px;
   word-spacing: 4px;
+  color: rgb(217, 215, 161);
 }
 
 .news-line3{
-  width: 50%;
+  width: 70%;
   text-align: center;
   font-family: 'Orbitron', sans-serif;
+  margin: auto;
   margin-top: 10px;
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: bold;
   color: rgb(56, 112, 154);
   letter-spacing: 2px;
   word-spacing: 4px;
-  margin-left: 50%;
-  transform: translate(-50%);
+  
 }
 
 .news-line4{
-  width: 100%;
+  width: 90%;
   text-align: center;
   font-family: 'Orbitron', sans-serif;
   margin-top: 10px;
@@ -1462,6 +1581,7 @@ input[type=number] {
   margin-left: 50%;
   transform: translate(-50%);
   text-decoration: none;
+  margin-bottom: 50px;
 }
 
 .news-line4:hover{
@@ -1486,7 +1606,6 @@ input[type=number] {
   width: 100%;
   margin-top: 100px;
   margin: auto;
-  display: block;
   align-items: center;
   align-self: center;
   z-index: 10;
@@ -1497,40 +1616,9 @@ input[type=number] {
 }
 
 
-.tab{
-  float: right;
-  text-align: 'center';
-  align-content: 'center';
-  cursor: grab;
-  margin-top: 10px;
-  margin: 10px;
-
-}
-
-.post-job{
-  float: right;
-  text-align: 'center';
-  align-content: 'center';
-  cursor: grab;
-  margin: 10px;
-  margin-top: 5px;
-  padding: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-radius: 3px;
-  border: 1px solid gray;
-  color: rgb(56, 112, 154);
 
 
-}
 
-.tab-content{
-  align-self: 'center';
-  float: right;
-  text-align: 'center';
-  font-size: 14px;
-
-}
 
 
 .tab-content:hover{
@@ -1541,7 +1629,7 @@ input[type=number] {
 
 
 #main{
-  width: 100vw;
+  width: 100%;
   margin: 0px;
   padding: 0px;
   float: none;
@@ -1565,7 +1653,6 @@ input[type=number] {
 
 .job-details-page{
   width: 100%;
-  max-width: 1100px;
   margin: auto;
   /* border: 2px solid white; */
   margin-top: 20px;
@@ -1587,8 +1674,8 @@ input[type=number] {
 
 
 .job-page-logo{
-  height: 100px;
-  width: 100px;
+  height: 5rem;
+  width: 5rem;
   float: left;
 }
 
@@ -1596,11 +1683,11 @@ input[type=number] {
   float: left;
   min-height: 100px;
   padding-left: 40px;
-  width: 40%;
+  width: calc(80% - 11rem);
 }
 
 .apply-button{
-  float: right;
+  float: left;
   padding: 14px;
   padding-top: 7px;
   padding-bottom: 7px;
@@ -1611,6 +1698,9 @@ input[type=number] {
   color: white;
   border: 1px solid white;
   align-self: center;
+  text-align: center;
+  width: 6rem;
+  margin: auto;
 
 
 }
@@ -1699,12 +1789,12 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .job-page-deets{
   margin-top: 10px;
-  font-size: 15px;
+  font-size: 15px; 
   text-transform: capitalize;
   padding-right: 10px;
   margin-bottom: 10px;
-  display: inline;
-  
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .bottom-spacer{
@@ -1741,17 +1831,17 @@ input[type="search"]::-webkit-search-cancel-button {
 .job-page-inner{
   display: block;
   float: left;
-  width: 89%;
+  width: calc(99% - 1,2rem);
 }
 
 .job-page-inner-1{
   display: block;
   float: left;
-  width: 10%;
+  width: 1.2rem;
 }
 
 .details-half{
-  width: 49%;
+  width: 48%;
   float: left;
   text-align: left;
   margin-top: 20px;
@@ -1770,6 +1860,7 @@ input[type="search"]::-webkit-search-cancel-button {
   float: left;
   font-family: 'Roboto', sans-serif;
   color: white;
+  margin-left: 10px;
   margin: 0px;
   font-size: 15px;
   padding-left: 20px;
@@ -1797,7 +1888,7 @@ input[type="search"]::-webkit-search-cancel-button {
   color: white;
   border: 1px solid white;
   align-self: center;
-  width: 70px;
+  width: 7rem;
   text-align: center;
 }
 
@@ -1877,15 +1968,16 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .job-page-left{
-  width: 35%;
-  float: left;
-  font-family: 'Roboto', sans-serif;
+  width: calc(34% - 20px);
+  float: right;
+  font-family: 'Roboto', sans-serif; 
   color: white;
   margin: 0px;
   height: 100vh;
-  margin-top: 150px;
   overflow-y: scroll;
   overflow-x: hidden;
+  margin-top: 53px;
+  margin-bottom: 20px;
 
 }
 
@@ -1905,9 +1997,13 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .jobs-wrapper{
-  padding: 10px;
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+  padding-top: 0px;
   display: block;
   display: flex;
+  flex-wrap: wrap;
 
 }
 
@@ -1929,6 +2025,7 @@ input[type="search"]::-webkit-search-cancel-button {
   display: inline;
   margin-bottom: 50px;
   padding-bottom: 50px;
+  margin-right: 20px;
   border-radius: 5px;
   border: 1px solid rgba(128, 128, 128, 0.658);
   margin-top: 150px;
@@ -1984,7 +2081,7 @@ input[type="search"]::-webkit-search-cancel-button {
   outline: none;
   background: transparent;
   border-radius: 10px;
-  width: 170px;
+  width: 100%;
 
 }
 
@@ -2001,11 +2098,13 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .react-select-wrapper{
   float: left;
-  margin-left: 10px;
+  width: 15%;
+  margin-left: 1%;
+  margin-top: 10px;
 }
 
 .react-select-wrapper-jobs{
-  width: 100%;
+  width: 90%;
   margin-top: 30px;
 }
 
@@ -2026,6 +2125,239 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .dropdown::-ms-expand {
     display: none;
+}
+
+@media screen and (max-width: 950px){
+
+  .tabs{
+    flex-direction: column;
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+  }
+
+  .tab-content{
+    font-size: 0.8rem;
+  }
+
+  .tab, .post-job{
+    margin: 1px;
+    padding: 0px;
+    border: none;
+  }
+
+  .newsletter-header-input-page{
+  width: 50%;
+  height: 40px;
+
+  color: black;
+  margin: auto;
+  margin-top: 2px;
+  background: white;
+  border-radius: 3px;
+  padding-right: 2px;
+  margin-bottom: 0px;
+  float: left;
+  margin-left: 15px;
+  border: 1px solid rgba(128, 128, 128, 0.776);
+  background: black;
+  color: white;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+}
+
+
+
+.newsletter-input-inner-page{
+  width: calc(99% - 7.5rem);
+  margin: auto;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  color: white;
+  outline: none;
+  float: left;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.react-select-wrapper{
+  width: 31%;
+}
+
+.job-page-left{
+  margin-top: 120px;
+}
+
+.job-page-right{
+  margin-top: 220px;
+}
+
+.feature{
+    width: 42%;
+    margin: 2%;
+  }
+
+
+}
+
+@media screen and (max-width: 600px){
+  .header{
+    flex-direction: column;
+    
+  }
+
+  .home{
+    flex-direction: column;
+    width: calc(95% - 10rem);
+  }
+
+
+
+  .newsletter-header-input{
+    width: 98%;
+    margin-bottom: 15px;
+  }
+
+  .search-input{
+    width: 98%;
+  font-size: 0.8rem;
+  }
+
+  .tabs{
+    flex-direction: column;
+    text-align: center;
+    margin-right: 10px;
+    margin-top: -5px;
+  }
+
+  .tab-content{
+    font-size: 0.8rem;
+  }
+
+  .tab, .post-job{
+    margin: 1px;
+    padding: 0px;
+    border: none;
+  }
+
+  .news-logo{
+    margin-top: 150px;
+  }
+
+  .news-line3{
+    width: 90%;
+  }
+
+  .news-line2{
+    margin-top: 30px;
+    width: 80%;
+    color: rgb(217, 215, 161);
+  }
+
+  .news-line1{
+    color: rgb(202, 132, 110);
+
+  }
+
+  .news-line4{
+    margin-top: 40px;
+  }
+
+  .newsletter-header-input-page{
+    width: 90%;
+  }
+  
+  .jobs-left{
+    width: 100%;
+  }
+
+  .select-dropdown-jobs{
+    width: 85%;
+  }
+
+  .jobs-right-wrapper{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+
+  .jobs-right{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .job{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .job-container-loading{
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+  }
+
+  .top-filter-wrapper{
+    margin-top: 120px;
+    position: relative;
+    z-index: 0;
+    box-shadow: none;
+  }
+
+  .react-select-wrapper{
+    width: 90%;
+    margin-left: 2%;
+  }
+
+  .job-page-right{
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  .job-page-left{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    width: calc(100% - 40px);
+  }
+
+  .job-page-job{
+    margin-right: 0px;
+  }
+
+  .job-page-job-selected{
+    margin-right: 0px;
+  }
+
+  .feature{
+    width: calc(100% - 40px);
+    height: auto;
+
+  }
+
+  .explanation-card{
+    margin-top: 40px;
+    width: calc(100%-40px)
+  }
+
+
+
+  .explanation-text{
+    margin-bottom: 2rem;
+  }
+
+  
+
+
+ 
+
 }
 
 

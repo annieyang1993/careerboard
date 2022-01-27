@@ -44,22 +44,23 @@ export default function Newsletter() {
     <div className = "content">
       <div className = 'content-inner'>
         <img className = 'news-logo' src={logo}/>
-        <div className = 'news-name'>CryptoCareerBoard</div>
+        <div className = 'news-name'>Crypto Career Board</div>
         <div className = 'news-line1'>Build the future of the internet.</div>
         <div className = 'news-line2'>All skillsets and experience levels are welcome.</div>
-        <div className = 'news-line3'>Browse postings from software engineering to human resources, product design, operations, and more.</div>
         
         {subscribeError ? 
         <div className = 'newsletter-header-input-page' style={{border: '1px solid red'}}>
           <input type="email" value = {email} placeholder = 'Enter email to receive job updates weekly' onChange = {(e)=>{setEmail(e.target.value)}} className = 'newsletter-input-inner-page'/>
-          <div className = 'subscribe-newsletter-page' onClick={()=>{handleSubscribe()}}> {subscribed ? <div>Subscribed <BsCheckLg/></div>: loading ? <div>Loading...</div> : <div>Subscribe</div>}</div>
+          <div className = 'subscribe-newsletter-page' onClick={()=>{handleSubscribe()}}> {subscribed ? <div>Subscribed</div>: loading ? <div>Loading...</div> : <div>Subscribe</div>}</div>
         </div>
         :<div className = 'newsletter-header-input-page'>
           <input type="email" value = {email} placeholder = 'Enter email to receive job updates weekly' onChange = {(e)=>{setEmail(e.target.value)}} className = 'newsletter-input-inner-page'/>
-          <div className = 'subscribe-newsletter-page' onClick={()=>{handleSubscribe()}}> {subscribed ? <div>Subscribed <BsCheckLg/></div>: loading ? <div>Loading...</div> : <div>Subscribe</div>}</div>
+          <div className = 'subscribe-newsletter-page' onClick={()=>{handleSubscribe()}}> {subscribed ? <div>Subscribed</div>: loading ? <div>Loading...</div> : <div>Subscribe</div>}</div>
         </div>}
 
-        <Link to='/' onClick={()=>authContext.setFilteringBool(true) } className = 'news-line4'>Browse jobs</Link> <br/>
+        <div className = 'news-line3'>Browse postings from software engineering to human resources, product design, operations, and more.</div>
+
+        <Link to='/' onClick={()=>authContext.setFilteringBool(true) } className = 'news-line4'>Browse jobs ></Link> <br/>
         {/* <div className = 'news-line5'>Browse Jobs</div> */}
 
       </div>
