@@ -20,10 +20,10 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/jobs">
               <JobsContainer/>
             </Route>
-          <Route path="/newsletter">
+          <Route path="/">
               <NewsletterContainer/>
           </Route>
           <Route path="/postjob">
